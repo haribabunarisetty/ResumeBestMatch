@@ -13,10 +13,10 @@ def home():
 
 @app.route('/search')
 def search():
-    """Renders the home page."""
+    """Renders the search page."""
     return render_template(
         'index.html',
-        title='Home Page',
+        title='Search Page',
         year=datetime.now().year,
     )
 
