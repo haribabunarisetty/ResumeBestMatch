@@ -1,17 +1,11 @@
-"""
-Routes and views for the flask application.
-"""
-
-from flask import Flask, request, render_template
-from datetime import datetime
-
+from flask import Flask, request
 app = Flask(__name__)
 
-if __name__ == __main__:
-    app.run(host='0.0.0.0', port=5000)
+if __name__ == '__main__':
+    app.run(debug=True)
 
 
-@app.route('/')
+@app.route('/', methods=["GET"])
 def home():
     """Renders the home page."""
     return "Welcome"
@@ -27,6 +21,6 @@ def search():
     output_string = context +" "+category+" "+threshold+" "+noOfMatches+" "+inputPath
     return output_string
 
-@app.route('/ping')
+@app.route('/ping', methods=["GET"])
 def ping():
     return "200"
