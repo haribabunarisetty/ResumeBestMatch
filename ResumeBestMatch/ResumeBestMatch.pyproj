@@ -29,8 +29,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="runserver.py" />
-    <Compile Include="ResumeBestMatch\__init__.py" />
-    <Compile Include="ResumeBestMatch\views.py" />
+    <Compile Include="ResumeBestMatch\app.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ResumeBestMatch\" />
