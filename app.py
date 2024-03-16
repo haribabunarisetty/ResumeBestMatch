@@ -2,10 +2,14 @@
 Routes and views for the flask application.
 """
 
+from flask import Flask, request, render_template
 from datetime import datetime
-from flask import render_template
-from ResumeBestMatch import app
-from flask import request
+
+app = Flask(__name__)
+
+if __name__ == __main__:
+    app.run(host='0.0.0.0', port=5000)
+
 
 @app.route('/')
 def home():
