@@ -18,8 +18,10 @@ def searchPost():
     context= request.json['context']
     category= request.json['category']
     threshold= request.json['threshold']
+    noOfMatches= request.json['noOfMatches']
+    inputPath= request.json['inputPath']
        
-    return getBestMatch(context,category,threshold)
+    return jsonify(getBestMatch(context,category,threshold,noOfMatches,inputPath))
 
 @app.route('/ping', methods=["GET"])
 def ping():

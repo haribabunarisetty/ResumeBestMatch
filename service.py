@@ -1,9 +1,11 @@
-def getBestMatch(context,category,threshold):
+def getBestMatch(context,category,threshold,noOfMatches,inputPath):
     resObj=[]
-    context= {'context': context}
-    category= {'category': category}
-    threshold= {'threshold': threshold}
-    resObj.append(context)
-    resObj.append(category)
-    resObj.append(threshold)
+    status= {'status':'success'}
+    count= {'count': ""}
+    metadata= {'metadata': {'confidenceScore': ""}}
+    results= {'results': [""]}
+    resObj.append(status)
+    resObj.append(count)
+    resObj.append(metadata)
+    resObj.append(results)
     return resObj
